@@ -205,8 +205,8 @@ portfolio_data = {
     "contact": {
         "title": "Ready to Begin Your Wellness Journey?",
         "description": "Whether you're a complete beginner or looking to deepen your practice, I'm here to guide you with compassion and expertise.",
-        "email": "gunjan.wellness@gmail.com",
-        "phone": "+1 (555) 123-4567",
+        "email": "gnn359@gmail.com",
+        "phone": "+1 (425) 324-6795",
         "services": [
             "Individual Yoga Sessions",
             "Group Classes",
