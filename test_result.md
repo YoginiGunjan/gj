@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the Gunjan Jagtiani wellness portfolio backend API thoroughly including portfolio data endpoint, contact form submission, contact submissions retrieval, and root endpoint."
+user_problem_statement: "Test the Gunjan Jagtiani wellness portfolio frontend comprehensively including page loading, navigation, all sections (Hero, About, Services, Experience, Certifications, Testimonials, Contact), contact form functionality, responsive design, and user experience flow."
 
 backend:
   - task: "Portfolio Data Endpoint (GET /api/portfolio)"
