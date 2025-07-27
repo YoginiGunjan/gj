@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -15,6 +16,9 @@ import {
   Calendar
 } from "lucide-react";
 import { useToast } from "../hooks/use-toast";
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const ContactSection = ({ data }) => {
   const { toast } = useToast();
@@ -38,15 +42,26 @@ const ContactSection = ({ data }) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Mock form submission
-    setTimeout(() => {
+    try {
+      const response = await axios.post(`${API}/contact`, formData);
+      
+      if (response.data.success) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: response.data.message,
+        });
+        setFormData({ name: "", email: "", service: "", message: "" });
+      }
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
       toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for reaching out. I'll get back to you within 24 hours.",
+        title: "Error",
+        description: "There was an issue sending your message. Please try again.",
+        variant: "destructive"
       });
-      setFormData({ name: "", email: "", service: "", message: "" });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
