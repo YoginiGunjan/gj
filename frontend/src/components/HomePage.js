@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
 import ServicesSection from "./ServicesSection";
@@ -8,12 +9,28 @@ import CertificationsSection from "./CertificationsSection";
 import TestimonialsSection from "./TestimonialsSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer";
-import { mockData } from "../data/mockData";
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const HomePage = () => {
-  const [data, setData] = useState(mockData);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const fetchPortfolioData = async () => {
+      try {
+        const response = await axios.get(`${API}/portfolio`);
+        setData(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching portfolio data:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchPortfolioData();
+
     // Animation on load
     document.body.style.opacity = "0";
     setTimeout(() => {
