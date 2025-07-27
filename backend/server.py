@@ -175,30 +175,9 @@ portfolio_data = {
     "testimonials": [
         {
             "id": 1,
-            "name": "Sarah Martinez",
-            "role": "New Mother",
-            "content": "Gunjan's prenatal yoga classes were a blessing during my pregnancy. Her gentle approach and deep knowledge made me feel safe and supported throughout my journey.",
-            "rating": 5
-        },
-        {
-            "id": 2,
-            "name": "Michael Chen",
-            "role": "Yoga Beginner",
-            "content": "As someone who was intimidated by yoga, Gunjan made me feel welcome and comfortable from day one. Her teaching style is patient and encouraging.",
-            "rating": 5
-        },
-        {
-            "id": 3,
-            "name": "Lisa Thompson",
-            "role": "Wellness Enthusiast",
-            "content": "The sound healing sessions with Gunjan are transformative. I leave feeling completely renewed and balanced. Her energy is truly healing.",
-            "rating": 5
-        },
-        {
-            "id": 4,
-            "name": "David Rodriguez",
-            "role": "Gym Member",
-            "content": "Gunjan's online sessions fit perfectly into my busy schedule. Her expertise and warmth come through even in virtual classes.",
+            "name": "Coming Soon",
+            "role": "Client Testimonials",
+            "content": "Real client testimonials will be added here as Gunjan continues to build her wellness practice and receive feedback from students and participants.",
             "rating": 5
         }
     ],
